@@ -17,9 +17,12 @@ engine.setProperty('voice', voices[7].id)
 
 hue = Bridge("192.168.178.20", bridgeUser)
 
+# just for debugging the hue lights
+print(hue.groups)
+print(hue.lights)
+
 
 def turn_on_office():
-    print(hue.groups)
     new_update = LightBuilder()
     new_update["on"] = True
     new_update["bri"] = 254
@@ -27,7 +30,6 @@ def turn_on_office():
 
 
 def turn_off_office():
-    print(hue.groups)
     new_update = LightBuilder()
     new_update["on"] = False
     new_update["bri"] = 254
@@ -69,6 +71,7 @@ def take_command():
 def run_jarvis():
     command = take_command()
     print(command)
+
     if 'office on' in command:
         turn_on_office()
         talk('Turning on office lights')
@@ -102,7 +105,8 @@ def run_jarvis():
         talk(pyjokes.get_joke())
 
     else:
-        talk('Please say the command again.')
+        talk('I am sorry, please repeat your command')
+
 
 while True:
     run_jarvis()
