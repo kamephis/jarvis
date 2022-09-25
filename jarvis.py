@@ -80,11 +80,11 @@ def run_jarvis():
         device = command.replace('turn on ', '')
         switch_device(device)
 
-    if 'turn off light' in command:
+    elif 'turn off light' in command:
         device = command.replace('turn off ', '')
         switch_device(device)
 
-    if 'play' in command:
+    elif 'play' in command:
         song = command.replace('play', '')
         talk('playing ' + song)
         pywhatkit.playonyt(song)
