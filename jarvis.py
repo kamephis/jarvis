@@ -17,23 +17,25 @@ engine.setProperty('voice', voices[7].id)
 
 hue = Bridge("192.168.178.20", bridgeUser)
 
+LightsMapper = {
+    "light": 8,
+    "fitness": 2
+}
+
+
 # just for debugging the hue lights
-print(hue.groups)
-print(hue.lights)
+# print(hue.groups)
+# print(hue.lights)
 
 
-def turn_on_office():
-    new_update = LightBuilder()
-    new_update["on"] = True
-    new_update["bri"] = 254
-    hue.groups[4].push(new_update.update_str())
+def switch_device(key):
+    if key in LightsMapper:
+        is_on = hue.lights[LightsMapper[key]].data['state']['on']
 
-
-def turn_off_office():
-    new_update = LightBuilder()
-    new_update["on"] = False
-    new_update["bri"] = 254
-    hue.groups[4].push(new_update.update_str())
+        new_update = LightBuilder()
+        new_update["on"] = not is_on
+        new_update["bri"] = 254
+        hue.lights[LightsMapper[key]].push(new_update.update_str())
 
 
 def talk(text):
@@ -44,7 +46,6 @@ def talk(text):
 def take_command():
     try:
         with sr.Microphone() as source:
-            print("listening...")
 
             listener.adjust_for_ambient_noise(source=source)
             voice = listener.listen(source, timeout=3)
@@ -69,16 +70,19 @@ def take_command():
 
 
 def run_jarvis():
+    print("listening...")
+    talk('How may I serve you?')
     command = take_command()
     print(command)
+    # print(hue.lights);
 
-    if 'office on' in command:
-        turn_on_office()
-        talk('Turning on office lights')
+    if 'turn on light' in command:
+        device = command.replace('turn on ', '')
+        switch_device(device)
 
-    if 'office off' in command:
-        turn_off_office()
-        talk('Turning off office lights')
+    if 'turn off light' in command:
+        device = command.replace('turn off ', '')
+        switch_device(device)
 
     if 'play' in command:
         song = command.replace('play', '')
@@ -105,7 +109,7 @@ def run_jarvis():
         talk(pyjokes.get_joke())
 
     else:
-        talk('I am sorry, please repeat your command')
+        talk('I am sorry, please speak your command')
 
 
 while True:
