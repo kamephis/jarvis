@@ -1,0 +1,162 @@
+2022-12-11 17:07:27,003 INFO    StreamThr :8660 [internal.py:wandb_internal():87] W&B internal server running at pid: 8660, started at: 2022-12-11 17:07:27.002428
+2022-12-11 17:07:27,004 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: status
+2022-12-11 17:07:27,006 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: status
+2022-12-11 17:07:27,007 DEBUG   SenderThread:8660 [sender.py:send():303] send: header
+2022-12-11 17:07:27,007 INFO    WriterThread:8660 [datastore.py:open_for_write():75] open: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/run-2jn5puah.wandb
+2022-12-11 17:07:27,012 DEBUG   SenderThread:8660 [sender.py:send():303] send: run
+2022-12-11 17:07:27,463 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: check_version
+2022-12-11 17:07:27,469 INFO    SenderThread:8660 [dir_watcher.py:__init__():216] watching files in: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files
+2022-12-11 17:07:27,469 INFO    SenderThread:8660 [sender.py:_start_run_threads():928] run started: 2jn5puah with start time 1670774846.998306
+2022-12-11 17:07:27,469 DEBUG   SenderThread:8660 [sender.py:send():303] send: summary
+2022-12-11 17:07:27,469 INFO    SenderThread:8660 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-11 17:07:27,470 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: check_version
+2022-12-11 17:07:27,623 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: run_start
+2022-12-11 17:07:27,632 DEBUG   HandlerThread:8660 [system_info.py:__init__():31] System info init
+2022-12-11 17:07:27,632 DEBUG   HandlerThread:8660 [system_info.py:__init__():46] System info init done
+2022-12-11 17:07:27,632 INFO    HandlerThread:8660 [system_monitor.py:start():150] Starting system monitor
+2022-12-11 17:07:27,632 INFO    SystemMonitor:8660 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-11 17:07:27,632 INFO    HandlerThread:8660 [system_monitor.py:probe():171] Collecting system info
+2022-12-11 17:07:27,633 INFO    SystemMonitor:8660 [interfaces.py:start():168] Started cpu
+2022-12-11 17:07:27,633 DEBUG   HandlerThread:8660 [system_info.py:probe():195] Probing system
+2022-12-11 17:07:27,634 INFO    SystemMonitor:8660 [interfaces.py:start():168] Started disk
+2022-12-11 17:07:27,634 INFO    SystemMonitor:8660 [interfaces.py:start():168] Started gpuapple
+2022-12-11 17:07:27,637 INFO    SystemMonitor:8660 [interfaces.py:start():168] Started memory
+2022-12-11 17:07:27,638 INFO    SystemMonitor:8660 [interfaces.py:start():168] Started network
+2022-12-11 17:07:27,641 DEBUG   HandlerThread:8660 [system_info.py:_probe_git():180] Probing git
+2022-12-11 17:07:27,657 DEBUG   HandlerThread:8660 [system_info.py:_probe_git():188] Probing git done
+2022-12-11 17:07:27,657 DEBUG   HandlerThread:8660 [system_info.py:probe():241] Probing system done
+2022-12-11 17:07:27,657 DEBUG   HandlerThread:8660 [system_monitor.py:probe():180] {'os': 'macOS-13.0-arm64-arm-64bit', 'python': '3.10.7', 'heartbeatAt': '2022-12-11T16:07:27.633726', 'startedAt': '2022-12-11T16:07:26.989374', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/marlon/Repositories/jarvis-ai/jarvis.py', 'codePath': 'jarvis.py', 'git': {'remote': 'git@github.com:kamephis/jarvis.git', 'commit': '43fa8b23e323097336263f1e87362cfd3ff08502'}, 'email': 'boehland@outlook.com', 'root': '/Users/marlon/Repositories/jarvis-ai', 'host': 'MiniMac.fritz.box', 'username': 'marlon', 'executable': '/opt/homebrew/opt/python@3.10/bin/python3.10', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'total': 460.4317207336426, 'used': 8.623226165771484}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2022-12-11 17:07:27,657 INFO    HandlerThread:8660 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-11 17:07:27,657 INFO    HandlerThread:8660 [system_monitor.py:probe():184] Publishing system info
+2022-12-11 17:07:27,657 DEBUG   HandlerThread:8660 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-11 17:07:27,657 DEBUG   HandlerThread:8660 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-11 17:07:27,658 INFO    HandlerThread:8660 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-11 17:07:27,660 DEBUG   SenderThread:8660 [sender.py:send():303] send: files
+2022-12-11 17:07:27,660 INFO    SenderThread:8660 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-11 17:07:27,663 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-11 17:07:27,663 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: stop_status
+2022-12-11 17:07:27,869 DEBUG   SenderThread:8660 [sender.py:send():303] send: telemetry
+2022-12-11 17:07:28,279 INFO    Thread-16 :8660 [upload_job.py:push():143] Uploaded file /var/folders/fs/znqbd02s2rb_cr554g5y4tq80000gn/T/tmp514u4jrywandb/e9xmzyat-wandb-metadata.json
+2022-12-11 17:07:28,477 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-metadata.json
+2022-12-11 17:07:28,477 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/output.log
+2022-12-11 17:07:28,477 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/requirements.txt
+2022-12-11 17:07:28,477 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-summary.json
+2022-12-11 17:07:30,483 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/output.log
+2022-12-11 17:07:36,075 DEBUG   SenderThread:8660 [sender.py:send():303] send: exit
+2022-12-11 17:07:36,075 INFO    SenderThread:8660 [sender.py:send_exit():442] handling exit code: 1
+2022-12-11 17:07:36,075 INFO    SenderThread:8660 [sender.py:send_exit():444] handling runtime: 8
+2022-12-11 17:07:36,077 INFO    SenderThread:8660 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-11 17:07:36,077 INFO    SenderThread:8660 [sender.py:send_exit():450] send defer
+2022-12-11 17:07:36,078 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,078 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-11 17:07:36,078 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,078 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-11 17:07:36,078 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 1
+2022-12-11 17:07:36,079 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,079 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-11 17:07:36,079 INFO    HandlerThread:8660 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-11 17:07:36,098 DEBUG   SystemMonitor:8660 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-11 17:07:36,099 DEBUG   SystemMonitor:8660 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-11 17:07:36,099 DEBUG   SystemMonitor:8660 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-11 17:07:36,099 INFO    HandlerThread:8660 [interfaces.py:finish():175] Joined cpu
+2022-12-11 17:07:36,099 INFO    HandlerThread:8660 [interfaces.py:finish():175] Joined disk
+2022-12-11 17:07:36,099 INFO    HandlerThread:8660 [interfaces.py:finish():175] Joined gpuapple
+2022-12-11 17:07:36,100 INFO    HandlerThread:8660 [interfaces.py:finish():175] Joined memory
+2022-12-11 17:07:36,100 INFO    HandlerThread:8660 [interfaces.py:finish():175] Joined network
+2022-12-11 17:07:36,100 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,100 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-11 17:07:36,100 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 2
+2022-12-11 17:07:36,100 DEBUG   SenderThread:8660 [sender.py:send():303] send: telemetry
+2022-12-11 17:07:36,100 DEBUG   SenderThread:8660 [sender.py:send():303] send: stats
+2022-12-11 17:07:36,100 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,100 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-11 17:07:36,101 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,101 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-11 17:07:36,101 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 3
+2022-12-11 17:07:36,101 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,101 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-11 17:07:36,101 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,101 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-11 17:07:36,101 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 4
+2022-12-11 17:07:36,101 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,101 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-11 17:07:36,101 DEBUG   SenderThread:8660 [sender.py:send():303] send: summary
+2022-12-11 17:07:36,102 INFO    SenderThread:8660 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-11 17:07:36,102 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,102 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-11 17:07:36,102 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 5
+2022-12-11 17:07:36,102 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,102 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-11 17:07:36,102 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,102 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-11 17:07:36,355 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 6
+2022-12-11 17:07:36,355 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:36,355 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-11 17:07:36,355 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:36,356 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-11 17:07:36,512 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-summary.json
+2022-12-11 17:07:36,513 INFO    Thread-13 :8660 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/config.yaml
+2022-12-11 17:07:37,080 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-11 17:07:38,099 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 7
+2022-12-11 17:07:38,099 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: poll_exit
+2022-12-11 17:07:38,100 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:38,100 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-11 17:07:38,100 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:38,101 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-11 17:07:38,101 INFO    SenderThread:8660 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-11 17:07:38,520 INFO    SenderThread:8660 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/output.log
+2022-12-11 17:07:38,521 INFO    SenderThread:8660 [dir_watcher.py:finish():392] scan: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files
+2022-12-11 17:07:38,521 INFO    SenderThread:8660 [dir_watcher.py:finish():406] scan save: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/requirements.txt requirements.txt
+2022-12-11 17:07:38,521 INFO    SenderThread:8660 [dir_watcher.py:finish():406] scan save: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/output.log output.log
+2022-12-11 17:07:38,526 INFO    SenderThread:8660 [dir_watcher.py:finish():406] scan save: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/config.yaml config.yaml
+2022-12-11 17:07:38,529 INFO    SenderThread:8660 [dir_watcher.py:finish():406] scan save: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-summary.json wandb-summary.json
+2022-12-11 17:07:38,532 INFO    SenderThread:8660 [dir_watcher.py:finish():406] scan save: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-metadata.json wandb-metadata.json
+2022-12-11 17:07:38,533 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 8
+2022-12-11 17:07:38,536 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:38,537 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-11 17:07:38,537 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:38,538 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-11 17:07:38,538 INFO    SenderThread:8660 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-11 17:07:39,173 INFO    Thread-20 :8660 [upload_job.py:push():143] Uploaded file /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/wandb-summary.json
+2022-12-11 17:07:39,182 INFO    Thread-18 :8660 [upload_job.py:push():143] Uploaded file /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/output.log
+2022-12-11 17:07:39,190 INFO    Thread-19 :8660 [upload_job.py:push():143] Uploaded file /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/config.yaml
+2022-12-11 17:07:39,196 INFO    Thread-17 :8660 [upload_job.py:push():143] Uploaded file /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/files/requirements.txt
+2022-12-11 17:07:39,402 INFO    Thread-12 (_thread_body):8660 [sender.py:transition_state():463] send defer: 9
+2022-12-11 17:07:39,402 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:39,403 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-11 17:07:39,403 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:39,403 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-11 17:07:39,403 INFO    SenderThread:8660 [file_pusher.py:join():173] waiting for file pusher
+2022-12-11 17:07:39,403 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 10
+2022-12-11 17:07:39,404 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:39,404 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-11 17:07:39,404 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:39,404 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-11 17:07:39,569 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 11
+2022-12-11 17:07:39,569 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:39,569 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-11 17:07:39,570 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:39,570 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-11 17:07:39,570 INFO    SenderThread:8660 [sender.py:transition_state():463] send defer: 12
+2022-12-11 17:07:39,571 DEBUG   SenderThread:8660 [sender.py:send():303] send: final
+2022-12-11 17:07:39,571 DEBUG   SenderThread:8660 [sender.py:send():303] send: footer
+2022-12-11 17:07:39,571 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: defer
+2022-12-11 17:07:39,571 INFO    HandlerThread:8660 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-11 17:07:39,571 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: defer
+2022-12-11 17:07:39,572 INFO    SenderThread:8660 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-11 17:07:39,572 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-11 17:07:39,572 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: poll_exit
+2022-12-11 17:07:39,574 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: server_info
+2022-12-11 17:07:39,574 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-11 17:07:39,574 DEBUG   SenderThread:8660 [sender.py:send_request():317] send_request: server_info
+2022-12-11 17:07:39,577 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-11 17:07:39,982 INFO    MainThread:8660 [wandb_run.py:_footer_history_summary_info():3408] rendering history
+2022-12-11 17:07:39,983 INFO    MainThread:8660 [wandb_run.py:_footer_history_summary_info():3440] rendering summary
+2022-12-11 17:07:39,983 INFO    MainThread:8660 [wandb_run.py:_footer_sync_info():3364] logging synced files
+2022-12-11 17:07:39,983 DEBUG   HandlerThread:8660 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-11 17:07:39,983 INFO    HandlerThread:8660 [handler.py:finish():814] shutting down handler
+2022-12-11 17:07:40,576 INFO    WriterThread:8660 [datastore.py:close():279] close: /Users/marlon/Repositories/jarvis-ai/wandb/run-20221211_170726-2jn5puah/run-2jn5puah.wandb
+2022-12-11 17:07:40,987 INFO    SenderThread:8660 [sender.py:finish():1331] shutting down sender
+2022-12-11 17:07:40,987 INFO    SenderThread:8660 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-11 17:07:40,987 INFO    SenderThread:8660 [file_pusher.py:join():173] waiting for file pusher
+2022-12-11 17:07:41,887 INFO    MainThread:8660 [internal.py:handle_exit():77] Internal process exited

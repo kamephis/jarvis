@@ -1,0 +1,15 @@
+
+listening...
+Traceback (most recent call last):
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 145, in <module>
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 84, in run_jarvis
+    command = take_command()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 60, in take_command
+    voice = listener.listen(source, timeout=4)
+  File "/opt/homebrew/lib/python3.10/site-packages/speech_recognition/__init__.py", line 652, in listen
+    buffer = source.stream.read(source.CHUNK)
+  File "/opt/homebrew/lib/python3.10/site-packages/speech_recognition/__init__.py", line 161, in read
+    return self.pyaudio_stream.read(size, exception_on_overflow=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pyaudio.py", line 612, in read
+    return pa.read_stream(self._stream, num_frames, exception_on_overflow)
+KeyboardInterrupt

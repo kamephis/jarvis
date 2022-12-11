@@ -5,3 +5,5 @@ pywhatkit
 wikipedia
 pyjokes
 hueber
+openai
+wandb

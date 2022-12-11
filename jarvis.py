@@ -4,16 +4,25 @@ import pywhatkit
 import datetime
 import wikipedia
 import pyjokes
+import os
+import openai
+import wandb
 from hueber.api import Bridge
 from hueber.lib import LightBuilder
+
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 bridgeUser = "RA9X7Ngd5z9EVGEvZoVNa-j7D8r58zAYfxXiQ0-N"
+# setup open ai
+openAiSecret = "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"
+openai.api_key = openAiSecret
+run = wandb.init(project='GPT-3 in Python')
+prediction_table = wandb.Table(columns=["prompt", "completion"])
 
 # 4 = female computer voice (natural), 7 = jarvis
-engine.setProperty('voice', voices[7].id)
+engine.setProperty('voice', voices[6].id)
 
 hue = Bridge("192.168.178.20", bridgeUser)
 
@@ -48,7 +57,7 @@ def take_command():
         with sr.Microphone() as source:
 
             listener.adjust_for_ambient_noise(source=source)
-            voice = listener.listen(source, timeout=3)
+            voice = listener.listen(source, timeout=4)
 
             command = listener.recognize_google(voice)
             command = command.lower()
@@ -61,7 +70,7 @@ def take_command():
 
     except sr.UnknownValueError:
         pass
-        # print(" Error")
+        print(" Error")
 
     except sr.RequestError as e:
         print("Request Error")
@@ -83,6 +92,31 @@ def run_jarvis():
     elif 'turn off light' in command:
         device = command.replace('turn off ', '')
         switch_device(device)
+
+    elif 'hello' in command:
+        device = command.replace('ask' , '')
+        
+        # test the ai
+        #gpt_prompt = "Correct this to standard English:\n\nShe no went to the market."
+        print('ask your question')
+        #command()
+        gpt_prompt = 'She no go market'
+
+        response = openai.Completion.create(
+            engine="text-davinci-002",
+            prompt=gpt_prompt,
+            temperature=0.5,
+            max_tokens=256,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
+        )
+
+        print(response['choices'][0]['text'])
+        prediction_table.add_data(gpt_prompt, response['choices'][0]['text'])
+        wandb.log({'predictions': prediction_table})
+        wandb.finish()
+        talk(response['choices'][0]['text'])
 
     elif 'play' in command:
         song = command.replace('play', '')
@@ -110,7 +144,6 @@ def run_jarvis():
 
     else:
         talk('I am sorry, please speak your command')
-
 
 while True:
     run_jarvis()

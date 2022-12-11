@@ -1,0 +1,12 @@
+
+listening...
+Traceback (most recent call last):
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 150, in <module>
+    run_jarvis()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 84, in run_jarvis
+    command = take_command()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 60, in take_command
+    voice = listener.listen(source, timeout=4)
+  File "/opt/homebrew/lib/python3.10/site-packages/speech_recognition/__init__.py", line 618, in listen
+    raise WaitTimeoutError("listening timed out while waiting for phrase to start")
+speech_recognition.WaitTimeoutError: listening timed out while waiting for phrase to start

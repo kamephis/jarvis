@@ -1,0 +1,34 @@
+{
+    "os": "macOS-13.0-arm64-arm-64bit",
+    "python": "3.10.7",
+    "heartbeatAt": "2022-12-11T16:05:56.249417",
+    "startedAt": "2022-12-11T16:05:55.601342",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/marlon/Repositories/jarvis-ai/jarvis.py",
+    "codePath": "jarvis.py",
+    "git": {
+        "remote": "git@github.com:kamephis/jarvis.git",
+        "commit": "43fa8b23e323097336263f1e87362cfd3ff08502"
+    },
+    "email": "boehland@outlook.com",
+    "root": "/Users/marlon/Repositories/jarvis-ai",
+    "host": "MiniMac.fritz.box",
+    "username": "marlon",
+    "executable": "/opt/homebrew/opt/python@3.10/bin/python3.10",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 8.623226165771484
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

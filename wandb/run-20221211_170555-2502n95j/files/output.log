@@ -1,0 +1,10 @@
+
+listening...
+hello
+ask your question
+Traceback (most recent call last):
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 149, in <module>
+    run_jarvis()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 102, in run_jarvis
+    command()
+TypeError: 'str' object is not callable

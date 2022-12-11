@@ -1,0 +1,11 @@
+
+listening...
+ Error
+Traceback (most recent call last):
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 147, in <module>
+    run_jarvis()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 84, in run_jarvis
+    command = take_command()
+  File "/Users/marlon/Repositories/jarvis-ai/jarvis.py", line 78, in take_command
+    return command
+UnboundLocalError: local variable 'command' referenced before assignment
