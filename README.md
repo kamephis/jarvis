@@ -8,4 +8,8 @@ and then:
 ## Requirements
 SpeechRecognition
 pyttsx3
-pyaudio
+PyAudio
+pywhatkit
+wikipedia
+pyjokes
+hueber
